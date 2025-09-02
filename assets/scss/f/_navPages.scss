@@ -518,7 +518,7 @@
 
 @include breakpoint("medium") {
 	.navPage-subMenu-horizontal.is-open {
-		border-left: 1px solid $container-border-global-color-base;
+		border-left: none;
 	}
 }
 

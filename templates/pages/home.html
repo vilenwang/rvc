@@ -140,7 +140,7 @@ blog:
     {{/if}}
 
     {{#if settings.blog_enabled}}
-        <div class="flex-component__mobileUp-6">
+        <div class="flex-component__mobileUp-6" style="display: none;">
             {{{region name="home_above_blog_summary"}}}
             {{#if theme_settings.show_articles_on_homepage}}
                 {{> components/f/blog/home-articles-list posts=blog.recent_posts columns=theme_settings.homepage_blog_posts_column_count}}

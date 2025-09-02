@@ -1,7 +1,7 @@
 {{#if products.featured}}
-    <div class="flex-component__mobileUp-4">
+    <div class="flex-component__mobileUp-4 featured">
         {{{region name="home_above_featured_products"}}}
-        {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count urls=urls}}
+        {{> components/products/featured products=products.featured columns=4 urls=urls}}
         {{{region name="home_below_featured_products"}}}
     </div>
 {{/if}}
