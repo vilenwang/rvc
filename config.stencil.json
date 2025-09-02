@@ -1,0 +1,11 @@
+{
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {}
+  },
+  "normalStoreUrl": "https://rcv-performance-b2b-store-1.mybigcommerce.com/?ctk=f4970cf2-f937-48af-818c-1c13ef5728c8",
+  "port": 3000,
+  "packageManager": "npm"
+}

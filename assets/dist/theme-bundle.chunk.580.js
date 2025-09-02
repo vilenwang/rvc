@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkflair_covent_garden=self.webpackChunkflair_covent_garden||[]).push([[580],{16580:(t,e,r)=>{function n(t,e){return n=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(t,e){return t.__proto__=e,t},n(t,e)}r.r(e),r.d(e,{default:()=>o}),r(68838);var o=function(t){var e,r;function o(){return t.apply(this,arguments)||this}return r=t,(e=o).prototype=Object.create(r.prototype),e.prototype.constructor=e,n(e,r),o}(r(49230).Z)}}]);
+//# sourceMappingURL=theme-bundle.chunk.580.js.map
