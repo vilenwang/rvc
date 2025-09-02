@@ -57,7 +57,7 @@ address {
 
 .footer-info-col--small {
     @include breakpoint("medium") {
-        width: width("2/12");
+        width: 25%;
     }
 }
 

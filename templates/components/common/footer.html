@@ -24,48 +24,57 @@
 <footer class="footer" role="contentinfo">
     <div class="container container--footer">
         <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
-                <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each pages}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li>
-                        <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
-                    </li>
-                </ul>
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-address">
+                <div class="footer-info-col--address-logo">
+                    <img src="https://store-ix0ixasu7w.mybigcommerce.com/content/images/footer-logo.png" alt="Footer Logo" class="footer-logo">
+                </div>
+                <div class="store-description">
+                    RCV Performance Products specializes in industry leading quality parts for countless motorsports applications from Ultra4 race cars, desert cars, Pro4 trucks, to Jeeps, Toyotas, UTVs, and Rock Bouncers...
+                </div>
+                <div class="store-address">
+                    <address>{{nl2br settings.address}}</address>
+
+                </div>
             </article>
             <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
-                <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
+                <h5 class="footer-info-heading">Forms & Service</h5>
                 <ul class="footer-info-list">
                     {{#each pages}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
+                        {{#if name '==' 'footer'}}
+                            {{#each children}}
+                                {{#if name '==' 'Forms & Service'}}
+                                    {{#each children}}
+                                        <li>
+                                            <a href="{{url}}">{{name}}</a>
+                                        </li>
+                                    {{/each}}
+                                {{/if}}
+                            {{/each}}
+                        {{/if}}
+                       
                     {{/each}}
-                    <li>
+                    <li style="display: none;">
                         <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
                     </li>
                 </ul>
             </article>
 
             <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
-                <h5 class="footer-info-heading">{{lang 'footer.categories'}}</h5>
+                <h5 class="footer-info-heading">Online Catalog</h5>
                 <ul class="footer-info-list">
-                    {{#each categories}}
-                        {{#if ../theme_settings.hide_navigation_featured_categories}}
-                            {{#if name '!==' ../../theme_settings.featured_category_name}}
-                                <li>
-                                    <a href="{{url}}">{{name}}</a>
-                                </li>
-                            {{/if}}
-                        {{else}}
-                            <li>
-                                <a href="{{url}}">{{name}}</a>
-                            </li>
+                    {{#each pages}}
+                        {{#if name '==' 'footer'}}
+                            {{#each children}}
+                                {{#if name '==' 'Online Catalog'}}
+                                    {{#each children}}
+                                        <li>
+                                            <a href="{{url}}">{{name}}</a>
+                                        </li>
+                                    {{/each}}
+                                {{/if}}
+                            {{/each}}
                         {{/if}}
+                       
                     {{/each}}
                 </ul>
             </article>
@@ -84,7 +93,7 @@
             </article>
             {{/and}}
 
-            {{#if settings.address}}
+            {{#if false}}
             <article class="footer-info-col footer-info-col--small footer-info-col--address" data-section-type="storeInfo">
                 <h5 class="footer-info-heading">{{lang 'footer.info'}}</h5>
                 <div class="footer-info-list">
@@ -100,15 +109,16 @@
                 {{#if settings.show_newsletter_box}}
                     {{> components/common/subscription-form}}
                 {{/if}}
-                {{#and theme_settings.social_icon_placement_bottom social_media}}
-                    <div class="footer-info-col--social" data-section-type="footer-SocialIcons">
-                            <h5 class="footer-info-heading">{{lang 'social.connect'}}</h5>
-                            {{> components/common/social-links}}
-                    </div>
-                {{/and}}
+                {{> components/common/social-links}}
+                <div class="usa-img">
+                    <img src="https://store-ix0ixasu7w.mybigcommerce.com/content/images/usa.png" alt="USA Logo">
+                </div>
                 {{{region name="ssl_site_seal--global"}}}
             </article>
         </section>
+        <div class="strong-img">
+            <img src="https://store-ix0ixasu7w.mybigcommerce.com/content/images/SAOTP_LOGO.png" alt="Strong Logo">
+        </div>
     </div>
     <div class="wrapper--footerBase">
             <div class="container">

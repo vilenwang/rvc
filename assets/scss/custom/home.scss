@@ -143,6 +143,8 @@
                 background-color: #d9d9d9;
                 color: #333;
                 line-height: 32px;
+                font-size: 16px;
+                font-weight: 400;
             }
         }
     }
@@ -171,7 +173,7 @@
     .navPages-list>.navPages-item {
         >.navPages-action.is-open, >.navPages-action:hover {
             background-color: #c75300;
-            border-bottom: 2px solid #c75300;
+            // border-bottom: 2px solid #c75300;
             color: #fff;
             svg {
                 fill: #fff;
@@ -179,7 +181,9 @@
             }
         }
     }
-   
+    .navPages-action.is-open[class] {
+        border-bottom: 0px;
+    }
     .navPage-subMenu-list {
         box-shadow: 0px 8px 20px 0px rgba(51, 51, 51, 0.16);
 
@@ -212,4 +216,199 @@
         }
     }
    }
+}
+.store-description,.store-address {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px;
+}
+.store-address {
+    padding-right: 120px;
+}
+.footer-info-heading {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.footer-info-list {
+    a {
+        font-size: 16px;
+    }
+}
+[data-section-type="footer-address"] {
+    width: 30%;
+    @media (min-width: 1440px) {
+        padding-right: 52px;
+
+    }
+}
+[data-section-type="footer-webPages"],[data-section-type="footer-categories"] {
+    width: calc(211/ 1200);
+}
+.button--subscribe {
+    padding: 12px;
+    font-size: 16px;
+}
+[data-section-type="newsletterSubscription"] {
+    .form-fieldset > .form-field {
+        margin-bottom: 0px;
+    }
+}
+.usa-img {
+    margin-top: 32px;
+}
+.strong-img {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+// 页脚移动端适配
+@media (max-width: 1023px) {
+    .footer-info {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    [data-section-type="footer-address"] {
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+        
+        .footer-info-col--address-logo {
+            text-align: center;
+            margin-bottom: 16px;
+            
+            .footer-logo {
+                max-width: 200px;
+                height: auto;
+            }
+        }
+        
+        .store-description {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            padding: 0 16px;
+        }
+        
+        .store-address {
+            padding-right: 0;
+            margin-top: 16px;
+        }
+    }
+    
+    [data-section-type="footer-webPages"],
+    [data-section-type="footer-categories"] {
+        width: 100%;
+        text-align: center;
+        
+        .footer-info-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            
+            li {
+                margin-bottom: 8px;
+            }
+        }
+    }
+    
+    [data-section-type="newsletterSubscription"] {
+        width: 100%;
+        text-align: center;
+        
+        .form-fieldset {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .usa-img {
+            margin-top: 24px;
+            text-align: center;
+            
+            img {
+                max-width: 120px;
+                height: auto;
+            }
+        }
+    }
+    
+    .strong-img {
+        margin-bottom: 32px;
+        
+        img {
+            max-width: 200px;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-info {
+        gap: 24px;
+    }
+    
+    [data-section-type="footer-address"] {
+        .footer-info-col--address-logo {
+            .footer-logo {
+                max-width: 160px;
+            }
+        }
+        
+        .store-description {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 8px;
+        }
+        
+        .store-address {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    
+    .footer-info-heading {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    
+    .footer-info-list {
+        a {
+            font-size: 14px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+        }
+    }
+    
+    [data-section-type="newsletterSubscription"] {
+        .form-fieldset {
+            max-width: 100%;
+            padding: 0 16px;
+        }
+        
+        .usa-img {
+            margin-top: 20px;
+            
+            img {
+                max-width: 100px;
+            }
+        }
+    }
+    
+    .strong-img {
+        margin-bottom: 24px;
+        
+        img {
+            max-width: 160px;
+        }
+    }
+    
+    .footer-info--base {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
 }
